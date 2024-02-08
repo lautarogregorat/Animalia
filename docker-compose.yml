@@ -1,0 +1,62 @@
+version: '3.9'
+networks:
+  mynetwork:
+    driver: bridge
+
+services:
+  # animaliabackend:
+  #   container_name: animaliaBackend
+  #   build: ./AnimaliaBackJava
+  #   ports:
+  #     - "8080:8080"
+  #   depends_on:
+  #     - mysql
+  #   environment:
+  #     - SPRING_PROFIELS_ACTIVE=docker
+  mysql:
+    container_name: mysqlContainer
+    image: mysql:8.2.0
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./db/mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_PASSWORD:  ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER:  ${MYSQL_USER}
+       
+
+  frontend:
+    container_name: animaliaFrontend
+    build: ./AnimaliaFrontendVite
+    ports:
+      - "4173:4173"
+  # depends_on:
+  #    - animaliabackend
+
+  
+  keycloak:
+    container_name: keycloakContainer
+    image: jboss/keycloak
+    ports:
+      - "8180:8080"
+    volumes:
+      - ./mi-tema/keywind/theme/keywind/.:/opt/jboss/keycloak/themes/keywind 
+    environment:
+      KEYCLOAK_USER: ${KEYCLOAK_USER}
+      KEYCLOAK_PASSWORD: ${KEYCLOAK_PASSWORD}
+      KEYCLOAK_DEVEL: true
+      DB_VENDOR: mysql
+      DB_ADDR: mysql
+      DB_DATABASE: ${MYSQL_DATABASE}
+      DB_USER: ${MYSQL_USER}
+      DB_PASSWORD: ${MYSQL_PASSWORD}
+      KEYCLOAK_LOGLEVEL: DEBUG  
+
+    depends_on:
+      - mysql
+
+
+
+

@@ -1,0 +1,28 @@
+CREATE TABLE `animaliabd`.`pacientes` (
+  `idPaciente` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  `peso` INT NULL,
+  `sexo` VARCHAR(45) NULL,
+  `fechaNacimiento` DATETIME NULL,
+  `esterilizado` TINYINT(1) NULL,
+  `descripcion` VARCHAR(255) NULL,
+  PRIMARY KEY (`idPaciente`));
+
+CREATE TABLE `animaliabd`.`responsables` (
+  `idResponsable` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(255) NOT NULL,
+  `apellido` VARCHAR(255) NULL,
+  `email` VARCHAR(255) NULL,
+  PRIMARY KEY (`idResponsable`));
+
+CREATE TABLE `animaliabd`.`consultas` (
+  `idConsulta` INT NOT NULL AUTO_INCREMENT,
+  `fecha` datetime NULL,
+  `descripcion` longtext NULL,
+  `foto` longblob NULL,
+   `paciente_id` int,
+  PRIMARY KEY (`idConsulta`),
+  CONSTRAINT fk_paciente FOREIGN KEY (paciente_id) REFERENCES pacientes (idPaciente));
+  ;
+
+SET SQL_SAFE_UPDATES = 0;
