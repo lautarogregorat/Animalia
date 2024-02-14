@@ -99,7 +99,7 @@ const ActualizarImgConsultaCampos = ({ consulta }) => {
       );*/
       // Enviar datos a la API
       const response = await axios.put(
-        `http://animaliaveterinaria:8080/api/consultas/actualizarFoto?idPaciente=${idPaciente}&idConsulta=${idConsulta}`,
+        `http://animaliaveterinaria.com.ar:8080/api/consultas/actualizarFoto?idPaciente=${idPaciente}&idConsulta=${idConsulta}`,
         formattedFormData,
         {
           headers: {

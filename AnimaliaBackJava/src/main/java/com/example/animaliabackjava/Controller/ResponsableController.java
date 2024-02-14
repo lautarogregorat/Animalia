@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-@CrossOrigin(origins = "http://animaliaveterinaria:4173")
+@CrossOrigin(origins = "http://animaliaveterinaria.com.ar:4173")
 @RestController
 @RequestMapping("/responsables")
 public class ResponsableController {

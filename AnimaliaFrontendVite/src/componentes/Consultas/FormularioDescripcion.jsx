@@ -93,7 +93,7 @@ const FormularioDescripcion = () => {
 
       // Enviar datos a la API
       const response = await axios.post(
-        `http://animaliaveterinaria:8080/api/consultas/registrar/${id}`,
+        `http://animaliaveterinaria:8080.com.ar/api/consultas/registrar/${id}`,
         formattedFormData,
         {
           headers: {

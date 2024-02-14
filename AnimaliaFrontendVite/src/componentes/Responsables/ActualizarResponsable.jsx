@@ -28,7 +28,7 @@ const ActualizarResponsable = () => {
     const getConsulta = async () => {
       try {
         const response = await axios.get(
-          `http://animaliaveterinaria:8080/api/responsables/${idResponsable}`,
+          `http://animaliaveterinaria.com.ar:8080/api/responsables/${idResponsable}`,
           {
             headers: { Authorization: `Bearer ${authContext.keycloak.token}` },
           }

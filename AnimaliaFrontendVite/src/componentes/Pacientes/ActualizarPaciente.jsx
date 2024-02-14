@@ -25,7 +25,7 @@ const ActualizarPaciente = () => {
     const getMascota = async () => {
       try {
         const response = await axios.get(
-          `http://animaliaveterinaria:8080/api/pacientes/${id}`,
+          `http://animaliaveterinaria.com.ar:8080/api/pacientes/${id}`,
           { headers: { Authorization: `Bearer ${authContext.keycloak.token}` } }
         );
         // Verificamos si el componente está montado antes de actualizar el estado

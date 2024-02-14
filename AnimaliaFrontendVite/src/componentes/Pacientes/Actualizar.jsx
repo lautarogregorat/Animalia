@@ -149,7 +149,7 @@ const Actualizar = ({ paciente }) => {
 
       // Enviar datos a la API
       const response = await axios.put(
-        `http://animaliaveterinaria:8080/api/pacientes/${paciente.idPaciente}`,
+        `http://animaliaveterinaria.com.ar:8080/api/pacientes/${paciente.idPaciente}`,
         formattedFormData,
         {
           headers: {

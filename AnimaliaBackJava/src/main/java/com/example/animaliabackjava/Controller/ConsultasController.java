@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
-@CrossOrigin(origins = "http://animaliaveterinaria:4173")
+@CrossOrigin(origins = "http://animaliaveterinaria.com.ar:4173")
 //@CrossOrigin(origins = "http://localhost:5173") apuntar al contenedor del frontend
 @RestController
 @RequestMapping("/consultas")

@@ -46,7 +46,7 @@ const ConsultasActualizar = () => {
     const getData = async () => {
       try {
         const response = await axios.get(
-          "http://animaliaveterinaria:8080/api/consultas",
+          "http://animaliaveterinaria.com.ar:8080/api/consultas",
           {
             headers: { Authorization: `Bearer ${authContext.keycloak.token}` },
             params: { idConsulta, idPaciente },
@@ -87,7 +87,7 @@ const ConsultasActualizar = () => {
       const formattedDate = format(currentDate, "yyyy/MM/dd HH:mm:ss");
 
       const response = await axios.put(
-        `http://animaliaveterinaria:8080/api/consultas/actualizar?idPaciente=${idPaciente}&idConsulta=${idConsulta}`,
+        `http://animaliaveterinaria.com.ar:8080/api/consultas/actualizar?idPaciente=${idPaciente}&idConsulta=${idConsulta}`,
         { titulo, descripcion, pdfLink, fechaModificacion: formattedDate },
         { headers: { Authorization: `Bearer ${authContext.keycloak.token}` } }
       );

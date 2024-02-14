@@ -191,7 +191,7 @@ function EnhancedTableToolbar(props) {
     setOpenBackdrop(true);
     try {
       const response = await axios.delete(
-        `http://animaliaveterinaria:8080/api/pacientes/${idPaciente}`,
+        `http://animaliaveterinaria.com.ar:8080/api/pacientes/${idPaciente}`,
         { headers: { Authorization: `Bearer ${authContext.keycloak.token}` } }
       );
       if (response.status === 200) {
@@ -203,7 +203,7 @@ function EnhancedTableToolbar(props) {
         );
         // Obtiene la lista actualizada de pacientes
         const response = await axios.get(
-          "http://animaliaveterinaria:8080/api/pacientes",
+          "http://animaliaveterinaria.com.ar:8080/api/pacientes",
           { headers: { Authorization: `Bearer ${authContext.keycloak.token}` } }
         );
         setRows(response.data);

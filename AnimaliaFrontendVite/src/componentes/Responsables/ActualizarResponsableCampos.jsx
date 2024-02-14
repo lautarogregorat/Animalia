@@ -178,7 +178,7 @@ const ActualizarResponsableCampos = ({ responsable, idPaciente }) => {
       };
       // Enviar datos a la API
       const response = await axios.put(
-        `http://animaliaveterinaria:8080/api/pacientes/actualizarResponsable/${idPaciente}`,
+        `http://animaliaveterinaria.com.ar:8080/api/pacientes/actualizarResponsable/${idPaciente}`,
         formattedFormData,
         {
           headers: {
