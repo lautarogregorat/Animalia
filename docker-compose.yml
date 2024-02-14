@@ -41,22 +41,22 @@ services:
 
   
   keycloak:
-    container_name: keycloakContainer
+    container_name: keycloakcontainer
     image: jboss/keycloak
     ports:
       - "8180:8080"
     volumes:
       - ./mi-tema/keywind/theme/keywind/.:/opt/jboss/keycloak/themes/keywind 
     environment:
-      KEYCLOAK_USER: ${KEYCLOAK_USER}
-      KEYCLOAK_PASSWORD: ${KEYCLOAK_PASSWORD}
-      KEYCLOAK_DEVEL: "true"
-      DB_VENDOR: mysql
-      DB_ADDR: mysql
-      DB_DATABASE: ${MYSQL_DATABASE}
-      DB_USER: ${MYSQL_USER}
-      DB_PASSWORD: ${MYSQL_PASSWORD}
-      KEYCLOAK_LOGLEVEL: DEBUG  
+      - KEYCLOAK_USER=${KEYCLOAK_USER}
+      - KEYCLOAK_PASSWORD=${KEYCLOAK_PASSWORD}
+      - KEYCLOAK_DEVEL=true
+      - DB_VENDOR=mysql
+      - DB_ADDR=mysql
+      - DB_DATABASE=${MYSQL_DATABASE}
+      - DB_USER=${MYSQL_USER}
+      - DB_PASSWORD=${MYSQL_PASSWORD}
+      - KEYCLOAK_LOGLEVEL=DEBUG 
 
     depends_on:
       - mysql
