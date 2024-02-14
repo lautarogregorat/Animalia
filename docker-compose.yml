@@ -25,6 +25,8 @@ services:
       MYSQL_PASSWORD:  ${MYSQL_PASSWORD}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_USER:  ${MYSQL_USER}
+    networks:
+      - mynetwork
        
 
   frontend:
@@ -32,6 +34,8 @@ services:
     build: ./AnimaliaFrontendVite
     ports:
       - "4173:4173"
+    networks:
+      - mynetwork  
   # depends_on:
   #    - animaliabackend
 
@@ -56,6 +60,8 @@ services:
 
     depends_on:
       - mysql
+    networks:
+      - mynetwork  
 
 
 
