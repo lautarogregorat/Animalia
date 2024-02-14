@@ -3,7 +3,7 @@ import Keycloak from "keycloak-js";
 
 const initKeycloak = async () => {
   const keycloak = new Keycloak({
-    url: "http://localhost:8180/auth",
+    url: "http://animaliaveterinaria:8180/auth",
     realm: "animalia",
     clientId: "animalia",
     onLoad: "login-required",

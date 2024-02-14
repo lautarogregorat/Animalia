@@ -17,7 +17,7 @@ export default function MultipleSelect(props) {
 
   React.useEffect(() => {
     axios
-      .get("http://localhost:8080/api/responsables", {
+      .get("http://animaliaveterinaria:8080/api/responsables", {
         headers: {
           Authorization: `Bearer ${authContext.keycloak.token}`,
         },

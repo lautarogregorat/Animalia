@@ -10,12 +10,9 @@ import MultipleSelect from "../MultipleSelector";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-} from "@mui/material";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import SimpleBackdrop from "../SimpleBackdrop";
 import ValidaciónResponsable from "../Errores/ValidacionResponsable";
@@ -181,7 +178,7 @@ const ActualizarResponsableCampos = ({ responsable, idPaciente }) => {
       };
       // Enviar datos a la API
       const response = await axios.put(
-        `http://localhost:8080/api/pacientes/actualizarResponsable/${idPaciente}`,
+        `http://animaliaveterinaria:8080/api/pacientes/actualizarResponsable/${idPaciente}`,
         formattedFormData,
         {
           headers: {

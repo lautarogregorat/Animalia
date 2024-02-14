@@ -215,7 +215,7 @@ const RegistrarPaciente = () => {
 
       // Enviar datos a la API
       const response = await axios.post(
-        "http://localhost:8080/api/pacientes",
+        "http://animaliaveterinaria:8080/api/pacientes",
         formattedFormData,
         {
           headers: {

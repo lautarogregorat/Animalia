@@ -71,7 +71,7 @@ const EditImagenCampo = ({ paciente }) => {
       };
       // Enviar datos a la API
       const response = await axios.put(
-        `http://localhost:8080/api/pacientes/editImagen/${paciente.idPaciente}`,
+        `http://animaliaveterinaria:8080/api/pacientes/editImagen/${paciente.idPaciente}`,
         formattedFormData,
         {
           headers: {

@@ -200,7 +200,7 @@ function EnhancedTableToolbar(props) {
     setOpenBackdrop(true);
     try {
       const response = await axios.delete(
-        `http://localhost:8080/api/consultas/eliminar/${idConsulta}`,
+        `http://animaliaveterinaria:8080/api/consultas/eliminar/${idConsulta}`,
         { headers: { Authorization: `Bearer ${authContext.keycloak.token}` } }
       );
       if (response.status === 200) {
@@ -211,7 +211,7 @@ function EnhancedTableToolbar(props) {
           prevSelected.filter((id) => id !== idConsulta)
         );
         const response = await axios.get(
-          `http://localhost:8080/api/consultas/${id}`,
+          `http://animaliaveterinaria:8080/api/consultas/${id}`,
           { headers: { Authorization: `Bearer ${authContext.keycloak.token}` } }
         );
         setRows(response.data);

@@ -1,5 +1,10 @@
 import React from "react";
-import { Container, Divider, Grid, Paper, Skeleton } from "@mui/material";
+import Container from "@mui/material/Container";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
+import Skeleton from "@mui/material/Skeleton";
+import Divider from "@mui/material/Divider";
+
 
 const SkeletonActualizarImgConsulta = () => {
   return (

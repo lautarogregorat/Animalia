@@ -1,5 +1,8 @@
 import React from "react";
-import { Paper, Typography, Skeleton, Container } from "@mui/material";
+import Container from "@mui/material/Container";
+import Paper from "@mui/material/Paper";
+import Skeleton from "@mui/material/Skeleton";
+import Typography from "@mui/material/Typography";
 import Grid from '@mui/material/Grid';
 
 

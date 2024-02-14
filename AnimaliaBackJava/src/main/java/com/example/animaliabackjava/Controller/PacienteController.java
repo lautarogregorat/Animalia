@@ -20,7 +20,7 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@CrossOrigin(origins = "http://localhost:4173")
+@CrossOrigin(origins = "http://animaliaveterinaria:4173")
 @RestController
 @RequestMapping("/pacientes")
 public class PacienteController {

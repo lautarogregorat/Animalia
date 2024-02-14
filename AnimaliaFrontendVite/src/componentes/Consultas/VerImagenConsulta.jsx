@@ -28,7 +28,7 @@ const VerImagenConsulta = () => {
     const getConsulta = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/consultas/imagenes",
+          "http://animaliaveterinaria:8080/api/consultas/imagenes",
           {
             headers: { Authorization: `Bearer ${authContext.keycloak.token}` },
             params: { idConsulta, idPaciente },
