@@ -46,7 +46,7 @@ services:
     environment:
       KEYCLOAK_USER: ${KEYCLOAK_USER}
       KEYCLOAK_PASSWORD: ${KEYCLOAK_PASSWORD}
-      KEYCLOAK_DEVEL: true
+      KEYCLOAK_DEVEL: "true"
       DB_VENDOR: mysql
       DB_ADDR: mysql
       DB_DATABASE: ${MYSQL_DATABASE}
