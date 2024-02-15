@@ -335,7 +335,7 @@ const ConsultasLista = (props) => {
       const getRows = async () => {
         try {
           const response = await axios.get(
-            `http://localhost:8080/api/consultas/${id}`,
+            `http://animaliaveterinaria.com.ar:8080/api/consultas/${id}`,
             {
               headers: {
                 Authorization: `Bearer ${authContext.keycloak.token}`,
@@ -361,7 +361,7 @@ const ConsultasLista = (props) => {
     const getRows = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/consultas/${id}`,
+          `http://animaliaveterinaria.com.ar:8080/api/consultas/${id}`,
           { headers: { Authorization: `Bearer ${authContext.keycloak.token}` } }
         );
         setRows(response.data);

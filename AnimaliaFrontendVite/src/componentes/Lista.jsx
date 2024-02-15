@@ -352,7 +352,7 @@ function EnhancedTable() {
     const getRows = async () => {
       try {
         const response = await axios.get(
-          "http://animaliaveterinaria:8080/api/pacientes",
+          "http://animaliaveterinaria.com.ar:8080/api/pacientes",
           { headers: { Authorization: `Bearer ${authContext.keycloak.token}` } }
         );
         setRows(response.data);
