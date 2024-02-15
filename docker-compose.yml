@@ -15,7 +15,7 @@ services:
   #     - SPRING_PROFIELS_ACTIVE=docker
   mysql:
     container_name: mysqlContainer
-    image: mysql:8.2.0
+    image: mysql:latest
     ports:
       - "3307:3306"
     volumes:
@@ -48,6 +48,7 @@ services:
     volumes:
       - ./mi-tema/keywind/theme/keywind/.:/opt/jboss/keycloak/themes/keywind 
     environment:
+      - JBOSS_AS_MANAGEMENT_BLOCKING_TIMEOUT=600
       - KEYCLOAK_USER=${KEYCLOAK_USER}
       - KEYCLOAK_PASSWORD=${KEYCLOAK_PASSWORD}
       - KEYCLOAK_DEVEL=true
