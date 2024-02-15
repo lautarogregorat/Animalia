@@ -11,6 +11,7 @@ import { useLocation } from "react-router-dom";
 import SkeletonResponsable from "../Skeletons/SkeletonResponsable";
 import { useAuth } from "../../context/AuthContext";
 
+
 const ActualizarResponsable = () => {
   const [responsable, setResponsable] = React.useState({});
   const location = useLocation();

@@ -14,9 +14,11 @@ import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
 import SimpleBackdrop from "../SimpleBackdrop";
 import ValidaciónResponsable from "../Errores/ValidacionResponsable";
 import { useAuth } from "../../context/AuthContext";
+
 
 const ActualizarResponsableCampos = ({ responsable, idPaciente }) => {
   const navigate = useNavigate();
