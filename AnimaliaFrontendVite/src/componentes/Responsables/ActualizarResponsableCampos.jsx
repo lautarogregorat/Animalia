@@ -367,7 +367,7 @@ const ActualizarResponsableCampos = ({ responsable, idPaciente }) => {
         <DialogTitle id="success-dialog">Registro Exitoso</DialogTitle>
         <DialogContent>
           <DialogContentText id="success-dialog-description">
-            El cliente se registró exitosamente.
+            El responsable se registró exitosamente.
           </DialogContentText>
         </DialogContent>
         <DialogActions>

@@ -327,7 +327,7 @@ const Actualizar = ({ paciente }) => {
         <DialogTitle id="success-dialog">Registro Exitoso</DialogTitle>
         <DialogContent>
           <DialogContentText id="success-dialog-description">
-            El cliente se actualizo exitosamente.
+            El paciente se actualizo exitosamente.
           </DialogContentText>
         </DialogContent>
         <DialogActions>

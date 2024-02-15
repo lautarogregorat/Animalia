@@ -191,7 +191,7 @@ const ActualizarImgConsultaCampos = ({ consulta }) => {
         <DialogTitle id="confirm-dialog">Confirmar Actualizacion</DialogTitle>
         <DialogContent>
           <DialogContentText id="confirm-dialog-description">
-            ¿Está seguro que quiere actualizar el paciente?
+            ¿Está seguro que quiere actualizar las imagenes?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -208,7 +208,7 @@ const ActualizarImgConsultaCampos = ({ consulta }) => {
         <DialogTitle id="success-dialog">Registro Exitoso</DialogTitle>
         <DialogContent>
           <DialogContentText id="success-dialog-description">
-            El cliente se actualizo exitosamente.
+            Las imagenes se actualizaron exitosamente.
           </DialogContentText>
         </DialogContent>
         <DialogActions>

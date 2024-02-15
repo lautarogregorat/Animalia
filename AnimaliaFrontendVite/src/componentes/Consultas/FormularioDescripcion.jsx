@@ -93,7 +93,7 @@ const FormularioDescripcion = () => {
 
       // Enviar datos a la API
       const response = await axios.post(
-        `http://animaliaveterinaria.com.ar:8080.com.ar/api/consultas/registrar/${id}`,
+        `http://animaliaveterinaria.com.ar:8080/api/consultas/registrar/${id}`,
         formattedFormData,
         {
           headers: {
@@ -239,10 +239,10 @@ const FormularioDescripcion = () => {
         onClose={() => setOpenConfirm(false)}
         aria-labelledby="confirm-dialog"
       >
-        <DialogTitle id="confirm-dialog">Confirmar Registro</DialogTitle>
+        <DialogTitle id="confirm-dialog">Confirmar Ficha</DialogTitle>
         <DialogContent>
           <DialogContentText id="confirm-dialog-description">
-            ¿Está seguro que quiere confirmar el registro?
+            ¿Está seguro que quiere confirmar la ficha?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -259,7 +259,7 @@ const FormularioDescripcion = () => {
         <DialogTitle id="success-dialog">Registro Exitoso</DialogTitle>
         <DialogContent>
           <DialogContentText id="success-dialog-description">
-            El cliente se registró exitosamente.
+            La ficha se registró exitosamente.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
