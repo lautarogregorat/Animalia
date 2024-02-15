@@ -15,8 +15,6 @@ HELP.md
 .settings
 .springBeans
 .sts4-cache
-database-config.properties
-config.properties
 ./src/main/resources/config.properties
 ### IntelliJ IDEA ###
 .idea
