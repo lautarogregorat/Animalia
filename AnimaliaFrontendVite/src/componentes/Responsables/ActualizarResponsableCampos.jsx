@@ -10,12 +10,10 @@ import MultipleSelect from "../MultipleSelector";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-} from "@mui/material";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogContent from "@mui/material/DialogContent";
+import DialogActions from "@mui/material/DialogActions";
 import DialogContentText from "@mui/material/DialogContentText";
 import SimpleBackdrop from "../SimpleBackdrop";
 import ValidaciónResponsable from "../Errores/ValidacionResponsable";
