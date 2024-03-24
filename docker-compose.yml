@@ -60,11 +60,3 @@ services:
       - mysql
     networks:
       - mynetwork
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> 47a1b9d0b28a3a70045dcbea0535ea00a8a1bf6b
