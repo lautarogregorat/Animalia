@@ -1,18 +1,18 @@
 version: '3.9'
+
 networks:
   mynetwork:
     driver: bridge
 
 services:
-  # animaliabackend:
-  #   container_name: animaliaBackend
-  #   build: ./AnimaliaBackJava
-  #   ports:
-  #     - "8080:8080"
-  #   depends_on:
-  #     - mysql
-  #   environment:
-  #     - SPRING_PROFIELS_ACTIVE=docker
+  animaliabackend:
+    container_name: animaliaBackend
+    build: ./AnimaliaBackJava
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+
   mysql:
     container_name: mysqlContainer
     image: mysql:8.2.0
@@ -27,7 +27,6 @@ services:
       - MYSQL_USER=${MYSQL_USER}
     networks:
       - mynetwork
-       
 
   frontend:
     container_name: animaliaFrontend
@@ -35,18 +34,17 @@ services:
     ports:
       - "4173:4173"
     networks:
-      - mynetwork  
-  # depends_on:
-  #    - animaliabackend
+      - mynetwork
+    # depends_on:
+    #    - animaliabackend
 
-  
   keycloak:
     container_name: keycloakcontainer
     image: jboss/keycloak
     ports:
       - "8180:8080"
     volumes:
-      - ./mi-tema/keywind/theme/keywind/.:/opt/jboss/keycloak/themes/keywind 
+      - ./mi-tema/keywind/theme/keywind/.:/opt/jboss/keycloak/themes/keywind
     environment:
       - JAVA_OPTS_APPEND=-Djboss.as.management.blocking.timeout=900
       - KEYCLOAK_USER=${KEYCLOAK_USER}
@@ -57,13 +55,8 @@ services:
       - DB_DATABASE=${MYSQL_DATABASE}
       - DB_USER=${MYSQL_USER}
       - DB_PASSWORD=${MYSQL_PASSWORD}
-      - KEYCLOAK_LOGLEVEL=DEBUG 
-
+      - KEYCLOAK_LOGLEVEL=DEBUG
     depends_on:
       - mysql
     networks:
-      - mynetwork  
-
-
-
-
+      - mynetwork
